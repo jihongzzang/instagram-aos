@@ -4,8 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
+import android.util.Log
+import android.view.Gravity
 import android.widget.EditText
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doAfterTextChanged
 import retrofit2.Call
@@ -35,6 +38,7 @@ class InstaJoinActivity : AppCompatActivity() {
         }
 
         findViewById<TextView>(R.id.join_btn).setOnClickListener {
+            Log.d("clickk", "click")
             val user = HashMap<String, Any>()
             user.put("username", username)
             user.put("password1", password1)
@@ -55,7 +59,11 @@ class InstaJoinActivity : AppCompatActivity() {
                 }
 
                 override fun onFailure(call: Call<User>, t: Throwable) {
-                    //
+                    Log.d("errorr", t.message!!)
+                    var toast =
+                        Toast.makeText(this@InstaJoinActivity, "네트워크 오류가 발생했습니다. 잠시 후 다시 시도해주세요.", Toast.LENGTH_SHORT)
+                    toast.setGravity(Gravity.TOP or Gravity.CENTER_HORIZONTAL, 0, 200) // 위에서 200px 아래로
+                    toast.show()
                 }
             })
         }
