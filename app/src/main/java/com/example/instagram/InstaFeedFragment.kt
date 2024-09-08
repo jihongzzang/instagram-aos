@@ -1,6 +1,5 @@
 package com.example.instagram
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -22,8 +21,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class InstaFeedFragment : Fragment() {
     lateinit var retrofitService: RetrofitService
-    lateinit var postLayer: ImageView
-    lateinit var postHeart: ImageView
 
     override fun onCreateView(
         inflater: LayoutInflater,
