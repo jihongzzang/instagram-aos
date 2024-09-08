@@ -12,7 +12,7 @@
         android:layout_width="196dp"
         android:layout_height="43dp"
         android:layout_marginTop="111dp"
-        android:layout_marginBottom="124dp"
+        android:layout_marginBottom="144dp"
         android:src="@drawable/logo_outstagram" />
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -29,53 +29,40 @@
             android:background="@drawable/insta_input_bg"
             android:hint="아이디"
             android:paddingLeft="27dp"
-            android:inputType="text"
             android:textColorHint="#B5B5B5"
             android:textSize="18dp" />
 
         <EditText
-            android:id="@+id/pw_input1"
+            android:id="@+id/pw_input"
             android:layout_width="356dp"
             android:layout_height="62dp"
-            android:layout_marginBottom="10dp"
             android:background="@drawable/insta_input_bg"
             android:hint="비밀번호"
-            android:paddingLeft="27dp"
             android:inputType="textPassword"
-            android:textColorHint="#B5B5B5"
-            android:textSize="18dp" />
-
-        <EditText
-            android:id="@+id/pw_input2"
-            android:layout_width="356dp"
-            android:layout_height="62dp"
-            android:background="@drawable/insta_input_bg"
-            android:hint="비밀번호 확인"
             android:paddingLeft="27dp"
-            android:inputType="textPassword"
             android:textColorHint="#B5B5B5"
             android:textSize="18dp" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <TextView
-        android:id="@+id/insta_login"
+        android:id="@+id/insta_join"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="43dp"
         android:layout_marginBottom="90dp"
-        android:text="로그인하기"
+        android:text="가입하기"
         android:textSize="18dp"
         android:textColor="#1868e8"
         android:textStyle="bold" />
 
     <TextView
-        android:id="@+id/join_btn"
+        android:id="@+id/login_btn"
         android:layout_width="162dp"
         android:layout_height="58dp"
         android:background="@drawable/insta_login"
         android:gravity="center"
-        android:text="가입"
+        android:text="로그인"
         android:textSize="20dp"
         android:textColor="@color/white" />
 

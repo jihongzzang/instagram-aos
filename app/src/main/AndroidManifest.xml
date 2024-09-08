@@ -22,10 +22,19 @@
         android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"
         tools:targetApi="31">
         <activity
-            android:name=".InstaJoin"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstaMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstaLoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstaJoinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InstaSplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
