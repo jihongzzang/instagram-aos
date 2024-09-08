@@ -6,6 +6,7 @@ import android.database.Cursor
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -44,13 +45,10 @@ class InstaPostFragment : Fragment() {
     }
 
     fun makePost() {
-        if (!this::imagePickerLauncher.isInitialized) {
-            return
-        }
-
         imagePickerLauncher.launch(
             Intent(Intent.ACTION_PICK).apply {
                 this.type = MediaStore.Images.Media.CONTENT_TYPE
+                Log.d("instaa", "start")
             }
         )
         selectedContent.doAfterTextChanged {
@@ -64,10 +62,6 @@ class InstaPostFragment : Fragment() {
         val retrofitService = retrofit.create(RetrofitService::class.java)
 
         upload.setOnClickListener {
-            if (imageUri == null) {
-                return@setOnClickListener
-            }
-
             val file = getRealFile(imageUri!!)
             val requestFile = RequestBody.create(
                 MediaType.parse(
@@ -75,15 +69,10 @@ class InstaPostFragment : Fragment() {
                 ), file
             )
             val body = MultipartBody.Part.createFormData("image", file!!.name, requestFile)
-
             val content = RequestBody.create(MultipartBody.FORM, contentInput)
-
             val header = HashMap<String, String>()
-
             val sp = (activity as InstaMainActivity).getSharedPreferences("user_info", Context.MODE_PRIVATE)
-
             val token = sp.getString("token", "")
-
             header.put("Authorization", "token " + token!!)
 
             retrofitService.uploadPost(header, body, content).enqueue(

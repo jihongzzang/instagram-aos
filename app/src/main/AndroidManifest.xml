@@ -25,6 +25,9 @@
             android:name=".MainActivity"
             android:exported="false" />
         <activity
+            android:name=".InstaChangeProfileActivity"
+            android:exported="false" />
+        <activity
             android:name=".InstaMainActivity"
             android:exported="false" />
         <activity
@@ -35,8 +38,8 @@
             android:exported="false" />
         <activity
             android:name=".InstaSplashActivity"
-            android:noHistory="true"
-            android:exported="true">
+            android:exported="true"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
