@@ -1,4 +1,4 @@
-package com.example.instagram
+package com.example.mycrudapp
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

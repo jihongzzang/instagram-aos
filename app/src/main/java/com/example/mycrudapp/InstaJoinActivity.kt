@@ -1,4 +1,4 @@
-package com.example.instagram
+package com.example.mycrudapp
 
 import android.content.Context
 import android.content.Intent

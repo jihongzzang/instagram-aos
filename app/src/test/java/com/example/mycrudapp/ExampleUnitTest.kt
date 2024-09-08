@@ -1,4 +1,4 @@
-package com.example.instagram
+package com.example.mycrudapp
 
 import org.junit.Test
 

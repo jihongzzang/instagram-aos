@@ -1,4 +1,4 @@
-package com.example.instagram
+package com.example.mycrudapp
 
 import android.os.Bundle
 import android.view.LayoutInflater

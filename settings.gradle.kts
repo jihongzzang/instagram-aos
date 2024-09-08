@@ -19,6 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "instagram"
+rootProject.name = "mycrudapp"
 include(":app")
  

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.instagram"
+    namespace = "com.example.mycrudapp"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.instagram"
+        applicationId = "com.example.mycrudapp"
         minSdk = 27
         targetSdk = 34
         versionCode = 1

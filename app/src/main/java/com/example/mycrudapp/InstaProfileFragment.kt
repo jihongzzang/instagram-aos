@@ -1,4 +1,4 @@
-package com.example.instagram
+package com.example.mycrudapp
 
 import android.content.Context
 import android.content.Intent
@@ -31,7 +31,7 @@ class InstaProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         userProfileImageView = view.findViewById(R.id.profile_img)
-        
+
         view.findViewById<TextView>(R.id.change_img).setOnClickListener {
             startActivity(Intent(activity as InstaMainActivity, InstaChangeProfileActivity::class.java))
         }

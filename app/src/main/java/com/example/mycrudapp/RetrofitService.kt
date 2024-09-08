@@ -1,4 +1,4 @@
-package com.example.instagram
+package com.example.mycrudapp
 
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

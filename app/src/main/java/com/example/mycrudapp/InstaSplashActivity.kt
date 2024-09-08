@@ -1,11 +1,10 @@
-package com.example.instagram
+package com.example.mycrudapp
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 
 class InstaSplashActivity : AppCompatActivity() {
